@@ -41,7 +41,9 @@ class NewsTableViewCell: UITableViewCell {
         titleLbl.text = dataItem.title
         dateLbl.text = dataItem.published_date
         authorLbl.text = dataItem.byline
-        Alamofire.request(dataItem.mediaUrl?[0] ?? "https://www.team8.vc/wp-content/uploads/2017/07/img_avatar.jpg").responseImage { response in
+        newsImg.layer.cornerRadius = newsImg.frame.height / 2
+        newsImg.layer.masksToBounds = true
+        Alamofire.request(dataItem.mediaUrl?[0] ?? AppConstants.dummyImage).responseImage { response in
             if let image = response.result.value {
                 DispatchQueue.main.async {
                     self.newsImg.image = image

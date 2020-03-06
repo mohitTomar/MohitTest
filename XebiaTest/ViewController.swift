@@ -10,11 +10,11 @@ import UIKit
 import HAActionSheet
 
 class ViewController: UIViewController {
-
-  var viewModel = NYViewModel()
+    
+    var viewModel = NYMostPopularViewModel()
     let options = ["Day",
-    "Week",
-    "Month"]
+                   "Week",
+                   "Month"]
     
     @IBOutlet weak var newsTableView: UITableView!
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     // MARK: BarButtonItem
     func addRightBarButtonItem(){
-
+        
         let changeBtn = UIBarButtonItem(title: "Range", style: .plain, target: self, action: #selector(showOptionSheet))
         navigationItem.rightBarButtonItem = changeBtn
     }
@@ -76,12 +76,12 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.stringRepresentation) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.stringRepresentation) as! NewsTableViewCell
         if viewModel.dataItems?.results?.count ?? 0 > 0 {
-                   let dataItems = viewModel.dataItems?.results![indexPath.row]
-                   cell.configure(whitViewModel: dataItems!, row: indexPath.row)
-               }
-               return cell
+            let dataItems = viewModel.dataItems?.results![indexPath.row]
+            cell.configure(whitViewModel: dataItems!, row: indexPath.row)
+        }
+        return cell
     }
     
     //MARK: - UITableViewDelegate
@@ -97,19 +97,19 @@ extension ViewController{
         let sheet = HAActionSheet(fromView: self.view, sourceData: options)
         sheet.buttonCornerRadius = 16
         sheet.show { (canceled, index) in
-          if !canceled {
-            self.title = self.options[index!]
-            switch index {
-            case 0:
-                self.viewModel.getNews(type: .oneDay)
-            case 1:
-                self.viewModel.getNews(type: .sevenDays)
-            case 2:
-                self.viewModel.getNews(type: .thirtyDays)
-            default:
-                self.viewModel.getNews(type: .oneDay)
+            if !canceled {
+                self.title = self.options[index!]
+                switch index {
+                case 0:
+                    self.viewModel.getNews(type: .oneDay)
+                case 1:
+                    self.viewModel.getNews(type: .sevenDays)
+                case 2:
+                    self.viewModel.getNews(type: .thirtyDays)
+                default:
+                    self.viewModel.getNews(type: .oneDay)
+                }
             }
-          }
         }
     }
 }

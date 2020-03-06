@@ -19,6 +19,8 @@ struct AppConstants {
     static let keyPath      : String = "api-key="
     static let baseUrl      : String = AppConstants.http + AppConstants.domain + AppConstants.apiVersion
     
+    static let dummyImage   : String = "https://www.team8.vc/wp-content/uploads/2017/07/img_avatar.jpg"
+    
     struct NewsTableView {
         static let heightForRow = 100.0
     }

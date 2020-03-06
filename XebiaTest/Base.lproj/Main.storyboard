@@ -35,40 +35,36 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJY-h2-JDJ">
-                                                    <rect key="frame" x="100" y="10.5" width="294" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="100" y="10.5" width="279" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Mohit Tomar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNF-xU-2E2">
+                                                    <rect key="frame" x="100" y="63" width="279" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22-11-1988" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-NT-EGc">
-                                                    <rect key="frame" x="299" y="73" width="95" height="18"/>
-                                                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="95" id="nwF-kT-bI8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNF-xU-2E2">
-                                                    <rect key="frame" x="100" y="91" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="309" y="79" width="70.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="MNF-xU-2E2" firstAttribute="leading" secondItem="4hY-6c-6S9" secondAttribute="trailing" constant="8" id="0PP-55-OeD"/>
-                                                <constraint firstAttribute="bottom" secondItem="MNF-xU-2E2" secondAttribute="bottom" constant="10" id="5qG-wA-pXA"/>
-                                                <constraint firstItem="eGt-NT-EGc" firstAttribute="bottom" secondItem="MNF-xU-2E2" secondAttribute="bottom" id="6oJ-it-LUm"/>
-                                                <constraint firstItem="eGt-NT-EGc" firstAttribute="trailing" secondItem="eJY-h2-JDJ" secondAttribute="trailing" id="Fxf-bk-RAm"/>
                                                 <constraint firstItem="4hY-6c-6S9" firstAttribute="centerY" secondItem="5Bx-vw-A7X" secondAttribute="centerY" id="Gsm-Gz-94D"/>
                                                 <constraint firstItem="4hY-6c-6S9" firstAttribute="leading" secondItem="5Bx-vw-A7X" secondAttribute="leading" constant="12" id="Htz-9X-ZiG"/>
-                                                <constraint firstAttribute="trailing" secondItem="eJY-h2-JDJ" secondAttribute="trailing" constant="20" id="XkM-1x-p2b"/>
+                                                <constraint firstItem="MNF-xU-2E2" firstAttribute="top" secondItem="eGt-NT-EGc" secondAttribute="top" multiplier="0.8" id="K0i-qy-A5l"/>
+                                                <constraint firstItem="eGt-NT-EGc" firstAttribute="trailing" secondItem="eJY-h2-JDJ" secondAttribute="trailing" constant="0.5" id="Kt1-Zy-ci9"/>
+                                                <constraint firstAttribute="trailing" secondItem="eJY-h2-JDJ" secondAttribute="trailing" constant="35" id="XkM-1x-p2b"/>
+                                                <constraint firstItem="eGt-NT-EGc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4hY-6c-6S9" secondAttribute="trailing" constant="8" symbolic="YES" id="iUd-c2-dP5"/>
                                                 <constraint firstItem="eJY-h2-JDJ" firstAttribute="leading" secondItem="4hY-6c-6S9" secondAttribute="trailing" constant="8" id="jD9-RO-Smv"/>
-                                                <constraint firstItem="eGt-NT-EGc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MNF-xU-2E2" secondAttribute="trailing" constant="8" id="qVu-CL-h3g"/>
+                                                <constraint firstAttribute="bottom" secondItem="eGt-NT-EGc" secondAttribute="bottom" constant="6" id="lfE-cU-Ii9"/>
                                                 <constraint firstItem="eJY-h2-JDJ" firstAttribute="top" secondItem="4hY-6c-6S9" secondAttribute="top" id="qrG-mp-Oqc"/>
-                                                <constraint firstItem="MNF-xU-2E2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eJY-h2-JDJ" secondAttribute="bottom" constant="8" id="sPa-Rf-lyP"/>
+                                                <constraint firstItem="MNF-xU-2E2" firstAttribute="trailing" secondItem="eJY-h2-JDJ" secondAttribute="trailing" id="ufa-sH-x6j"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
